@@ -2,11 +2,7 @@
 
 ¡Hola y bienvenidos! Este proyecto es una aplicación web pensada para gestionar y visualizar tickets de JIRA de forma organizada y práctica. 🌿✨
 Os incluyo un video demostración del proyecto:
-
-<video width="640" height="360" controls>
-  <source src="jira-trabajo.mp4" type="video/mp4">
-  Tu navegador no soporta el elemento de video.
-</video>
+[ver video de demostración] (jira-trabajo.mp4)
 
 
 Aquí podrás encontrar una interfaz sencilla y bonita, que te permitirá ver en tiempo real el estado de los tickets de tu equipo, con un toque amigable y natural. 🌻
