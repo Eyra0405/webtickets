@@ -3,7 +3,7 @@
 ¡Hola y bienvenidos! Este proyecto es una aplicación web pensada para gestionar y visualizar tickets de JIRA de forma organizada y práctica. 🌿✨
 Os incluyo un video demostración del proyecto:
 
-[Descargar video de demostración](https://github.com/Eyra0405/webtickets/releases/download/v1.0/jira-trabajo.mp4)
+[Descargar video de demostración](https://github.com/Eyra0405/webtickets/releases/tag/video)
 
 
 
