@@ -12,7 +12,7 @@ Aquí podrás encontrar una interfaz sencilla y bonita, que te permitirá ver en
 ## 🌿 Características principales 🌿
 Actualización automática: Los tickets se actualizan automáticamente cada 5 minutos. ¡Así siempre estarás al tanto!
 
-Clasificación por estado: Los tickets se organizan de acuerdo con su estado (Abierto, En espera, Asignado, Resuelto) de manera visual y clara.
+Clasificación por estado: Los tickets se organizan de acuerdo con su estado (Abierto, En espera, Resuelto) de manera visual y clara.
 
 Filtrado por diferentes criterios: Puedes filtrar los tickets por empresa, prioridad, estado y asignado para encontrar rápidamente lo que buscas.
 
