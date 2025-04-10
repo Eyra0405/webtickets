@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) { };
   ngOnInit() {
     this.fetchTickets(); // Obtener los tickets al inicio
-    interval(300000).subscribe(() => this.fetchTickets());  // Actualiza cada 5 minutos
+    interval(2000).subscribe(() => this.fetchTickets());  // Actualiza cada 5 minutos
 
 
 
