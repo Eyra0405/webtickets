@@ -1,0 +1,53 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<div class="grid">
+  <div class="box">
+    <div class="box-header">Tickets Abiertos</div>
+    <div class="box-content">
+      <div *ngFor="let ticket of openTickets" 
+           class="ticket" 
+           [ngClass]="{'open': ticket.status === 'abierto', 'blinking' : ticket.blinking}"
+           [attr.data-timeleft]="ticket.timeLeft ? 'critical' : 'normal'"
+           [ngStyle]="{ 'background': getTicketBackground(ticket.progress)}">
+        <p><strong>{{ ticket.key }}</strong></p>
+        <p><strong>Organización:</strong> {{ ticket.organizacion }}</p>
+        <p><strong>Prioridad: </strong>{{ ticket.prioridad }}</p>
+        <div class="ticket-image">
+          <img [src]="'assets/imagenes/' + ticket.herramientaImage" alt="{{ ticket.herramienta }}">
+        </div>
+      </div> <!-- Cierre de la iteración de ticket -->
+    </div> <!-- Cierre de box-content -->
+  </div> <!-- Cierre de box -->
+<!-- Cierre de grid --> <!-- Cierre de box -->
+
+  <div class="box">
+    <div class="box-header">Tickets en Espera</div>
+    <div class="box-content">
+      <div *ngFor="let ticket of waitingTickets" class="ticket" [ngClass]="{'waiting': true}">
+        <p><strong>{{ ticket.key}}</strong></p>
+        <p><strong>Organización:</strong> {{ ticket.organizacion }}</p>
+        <p><strong>Prioridad: </strong>{{ ticket.prioridad }}</p>
+        <div class="ticket-image">
+          <img [src]="'assets/imagenes/' + ticket.herramientaImage" alt="{{ ticket.herramienta }}">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="box-header">Tickets Resueltos</div>
+    <div class="box-content">
+      <div *ngFor="let ticket of resolvedTickets" class="ticket" [ngClass]="{'resolved': true}">
+        <p><strong>{{ ticket.key}}</strong></p>
+        <p><strong>Organización:</strong> {{ ticket.organizacion }}</p>
+        <p><strong>Prioridad: </strong>{{ ticket.prioridad }}</p>
+        <div class="ticket-image">
+          <img [src]="'assets/imagenes/' + ticket.herramientaImage" alt="{{ ticket.herramienta }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

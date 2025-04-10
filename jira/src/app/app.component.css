@@ -1,0 +1,183 @@
+.blinking {
+    animation: blink-animation 1s infinite;
+  }
+  
+  @keyframes blink-animation {
+    50% {
+      opacity: 0.5; /* 50% de opacidad en el punto medio */
+    }
+    100% {
+      opacity: 1; /* 100% de opacidad al final */
+    }
+  }
+  .container {
+    width: 90vw;
+    height: 90vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a237e;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  .container.alternate {
+    background-color: #3987be;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ahora hay solo tres columnas */
+  
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(#130058, #9097f7);
+    scrollbar-width: thin;  /* En Firefox: Barra delgada */
+    scrollbar-color: #ffffff transparent;
+  }
+  .box {
+    border-radius: 12px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+  }
+  .box-header:hover{
+    transform: scale(1.03);
+  }
+  .box > .box-header {
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: 25px;
+    border-bottom: 2px solid #fff;
+  }
+  .box-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Tres columnas */
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 7px;
+    border-radius: 0 0 12px 12px;
+      /* Personalizar barra de desplazamiento */
+    scrollbar-width: thin;  /* En Firefox: Barra delgada */
+    scrollbar-color: #ffffff transparent;  /* En Firefox: color del thumb blanco y track transparente */
+    }
+    /* Personalización para navegadores basados en Webkit (Chrome, Safari, Edge) */
+    .box-content::-webkit-scrollbar {
+      width: 8px;  /* Ancho de la barra de desplazamiento */
+    }
+    .box-content::-webkit-scrollbar-track {
+      background: transparent;  /* Fondo transparente de la barra de desplazamiento */
+    }
+    .box-content::-webkit-scrollbar-thumb {
+      background-color: #ffffff;  /* Color blanco para el thumb */
+      border-radius: 10px;
+      border: 2px solid transparent;  /* Bordes transparentes para el thumb */
+    }
+    .box-content::-webkit-scrollbar-thumb:hover {
+      background-color: #e0e0e0;  /* Color más oscuro del thumb al pasar el cursor */
+    }
+  .ticket {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;  /* Alinear los elementos al inicio */
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;  /* Aumentar el tamaño de la fuente */
+    line-height: 20px;  /* Reducir el interlineado (puedes ajustarlo a tu preferencia) */
+    border-radius: 8px;
+    padding: 10px;
+    padding-top: 20px;
+    width: 370px;
+    height: auto; 
+    max-width: 370px;  /* Aumentar el ancho máximo */
+    max-height: 120px;  /* Dejar que el alto se ajuste al contenido */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.445);
+    text-align: left; 
+    position: relative;  
+  }
+  .ticket:hover {
+    transform: scale(1.05);
+  }
+  .ticket p {
+    margin: 2px 0;
+    padding: 0;
+    overflow-wrap: break-word; /* Permite que el texto se divida en varias líneas */
+    word-wrap: break-word;
+    margin-right: 110px; /* Esconde el texto que no cabe */
+  }
+  .ticket-image-wrapper {
+    position: absolute; /* La imagen estará fija en relación al ticket */
+    right: 10px; /* Esto le da un margen a la derecha */
+    top: 50%; /* Coloca la imagen al centro vertical */
+    transform: translateY(-50%); /* Ajusta para centrarla verticalmente */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Fija el tamaño del área de la imagen */
+  }
+  
+  .ticket-image {
+    position: absolute; /* Fija la posición de la imagen dentro del contenedor */
+    top: 2px;
+    bottom: 10px;
+    right: 10px; /* Coloca la imagen en la parte superior derecha del ticket */
+    width: 100px; /* Tamaño de la imagen */
+    height: 100px;/* Espacio entre el contenido y la imagen */
+  }
+  .ticket-image img {
+    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+    height: 100%; /* Ajusta la imagen al tamaño del contenedor */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 0; /* Ajusta la altura de la imagen */
+  }
+  
+  
+  /* Colores de los tickets */
+  .open {
+    background-color: rgb(252, 209, 194);
+    color: rgb(36, 11, 75);
+    border: 2px solid transparent;
+  }
+  
+  .open:hover {
+    transform: scale(1.05);
+  }
+  
+  .waiting {
+    background-color: rgb(248, 231, 154);
+    color: rgb(36, 11, 75);
+  }
+  
+  .waiting:hover {
+    transform: scale(1.05);
+  }
+  
+  .resolved {
+    background: #b0cefc;
+    color: rgb(36, 11, 75);
+    border: 2px solid #b0cefc;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.445); 
+  }
+  
+  .resolved:hover {
+    transform: scale(1.05);
+  }
